@@ -15,11 +15,11 @@ public class Book {
     private static final long serialVersionUID = 1L;
     @Id
     long id;
-    @Column(name="name")
+    @Column(name = "name")
     String name;
-    @Column(name="author")
+    @Column(name = "author")
     String author;
-    @Column(name="price")
+    @Column(name = "price")
     double price;
 
 }
