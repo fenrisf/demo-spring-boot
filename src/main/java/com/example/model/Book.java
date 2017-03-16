@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -12,14 +13,20 @@ import javax.persistence.Id;
 @Entity
 @Data
 public class Book {
-    private static final long serialVersionUID = 1L;
+    public Book(String name, String author, double price) {
+        this.name = name;
+        this.author = author;
+        this.price = price;
+    }
+
     @Id
+    @GeneratedValue
     long id;
     @Column(name = "name")
-    String name;
+    private String name;
     @Column(name = "author")
-    String author;
+    private String author;
     @Column(name = "price")
-    double price;
+    private double price;
 
 }
